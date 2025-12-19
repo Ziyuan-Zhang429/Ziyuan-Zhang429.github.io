@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ziyuan Zhang | Infectious Disease Epidemiology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ziyuan Zhang is an infectious disease epidemiologist focusing on phylodynamics, epidemic modeling, suicide epidemiology, and applications of NLP to social determinants of health." />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --bg-alt: #ffffff;
+      --primary: #234b8f;
+      --primary-soft: rgba(35, 75, 143, 0.08);
+      --accent: #e88b3c;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-pill: 999px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #dde7ff 0, #f5f7fb 40%, #fdfdfd 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(245, 247, 251, 0.92), rgba(245, 247, 251, 0.75), transparent);
+      padding: 10px 0 6px;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-initials {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 20%, #ffffff, #234b8f);
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.88rem;
+    }
+
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--primary);
+      background: rgba(35, 75, 143, 0.06);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      border: 1px solid rgba(35, 75, 143, 0.23);
+      color: var(--primary);
+      font-size: 0.84rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+    }
+
+    .nav-cta span.icon {
+      font-size: 0.9rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 28px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .hero-main {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: var(--radius-xl);
+      padding: 22px 22px 20px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.76rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline span.badge-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #234b8f);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      font-size: 0.74rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.25);
+    }
+
+    .hero-name {
+      font-size: 2.15rem;
+      line-height: 1.1;
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 14px;
+    }
+
+    .hero-subtitle span.highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      border: none;
+      padding: 9px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #182c61);
+      color: #f9fafb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.5);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--primary);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
+      text-decoration: none;
+      background: #ffffff;
+    }
+
+    .btn .icon {
+      font-size: 1rem;
+    }
+
+    .hero-note {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-aside {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-xl);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+    }
+
+    .hero-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: #1f2933;
+      border: 1px solid rgba(129, 140, 248, 0.45);
+    }
+
+    .chip span.icon {
+      font-size: 0.85rem;
+    }
+
+    .meta-list {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .meta-list strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* SECTION WRAPPER */
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .section-body {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 20px;
+    }
+
+    .about-grid p {
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 10px;
+    }
+
+    .about-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: #374151;
+    }
+
+    .about-list li + li {
+      margin-top: 6px;
+    }
+
+    .about-list span.label {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* TWO-COLUMN LISTS */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 18px;
+    }
+
+    .subsection-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .item-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .item-meta span + span::before {
+      content: "•";
+      margin: 0 5px;
+      color: #d1d5db;
+    }
+
+    .item-body {
+      font-size: 0.8rem;
+      color: #374151;
+      margin-top: 3px;
+    }
+
+    ul.compact {
+      margin-top: 4px;
+      padding-left: 14px;
+      font-size: 0.8rem;
+      color: #374151;
+    }
+
+    ul.compact li + li {
+      margin-top: 2px;
+    }
+
+    /* PUBLICATIONS */
+    .pub-group + .pub-group {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #e5e7eb;
+    }
+
+    .pub-group-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .pub-item {
+      font-size: 0.8rem;
+      color: #374151;
+      margin-bottom: 5px;
+    }
+
+    .pub-item span.me {
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+
+    .pub-journal {
+      font-style: italic;
+      color: #4b5563;
+    }
+
+    /* CV + CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: #374151;
+    }
+
+    .contact-list li + li {
+      margin-top: 6px;
+    }
+
+    .contact-list span.label {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .cv-box {
+      padding: 12px 12px 10px;
+      border-radius: 18px;
+      background: #f9fafb;
+      border: 1px dashed #d1d5db;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    .cv-box p {
+      margin-bottom: 6px;
+    }
+
+    .cv-box code {
+      background: #111827;
+      color: #f9fafb;
+      padding: 3px 6px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 26px;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--text-muted);
+    }
+
+    .footer a:hover {
+      color: var(--primary);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-aside {
+        order: -1;
+      }
+      .about-grid,
+      .two-column,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 14px 14px 28px;
+      }
+      .hero-main {
+        padding: 18px 16px 16px;
+      }
+      .hero-name {
+        font-size: 1.75rem;
+      }
+      .section-body {
+        padding: 14px 14px 12px;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        right: 16px;
+        top: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(248, 250, 252, 0.98);
+        border-radius: 16px;
+        padding: 8px;
+        box-shadow: 0 15px 40px rgba(15, 23, 42, 0.25);
+        min-width: 170px;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links a {
+        width: 100%;
+        padding: 8px 10px;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <div class="brand-initials">ZZ</div>
+          <div class="brand-text">
+            <span>Ziyuan Zhang</span>
+            <span>Infectious Disease Epidemiology</span>
+          </div>
+        </div>
+        <nav>
+          <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+          <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#talks">Talks</a>
+            <a href="#cv-contact">CV &amp; Contact</a>
+          </div>
+        </nav>
+        <a href="#cv-contact" class="nav-cta">
+          <span class="icon">✉️</span> <span>Connect</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-main">
+        <div class="hero-tagline">
+          <span class="badge-dot">✶</span>
+          Infectious Disease Epidemiologist
+        </div>
+        <h1 class="hero-name">Ziyuan&nbsp;Zhang</h1>
+        <p class="hero-subtitle">
+          PhD student in <span class="highlight">Epidemiology</span> at UC Berkeley, working at
+          the intersection of infectious disease dynamics, phylodynamics, suicide epidemiology,
+          and applications of NLP to social determinants of health.
+        </p>
+        <div class="hero-meta">
+          <span>Doctor of Philosophy in Epidemiology, UC Berkeley (Infectious Disease track)</span>
+          <span>Master of Science in Epidemiology, Harvard T.H. Chan School of Public Health</span>
+        </div>
+        <div class="hero-actions">
+          <!-- Update the href below to your actual CV file -->
+          <a class="btn btn-primary" href="CV_Ziyuan_Zhang.pdf" target="_blank" rel="noopener">
+            <span class="icon">📄</span> Download CV
+          </a>
+          <a class="btn btn-secondary" href="mailto:leozhang0429@berkeley.edu">
+            <span class="icon">✉️</span> Email me
+          </a>
+        </div>
+        <div class="hero-note">
+          Currently based in <strong>Berkeley, CA</strong>. Open to collaborations on infectious
+          disease modeling, test-negative designs, and data-driven suicide prevention.
+        </div>
+      </div>
+
+      <aside class="hero-aside" aria-label="Snapshot">
+        <div class="hero-card">
+          <h3>Research Focus</h3>
+          <div class="hero-chip-row">
+            <span class="chip"><span class="icon">🦠</span> Infectious disease dynamics</span>
+            <span class="chip"><span class="icon">🌐</span> Phylodynamics &amp; under-reporting</span>
+            <span class="chip"><span class="icon">🧠</span> Suicide epidemiology</span>
+            <span class="chip"><span class="icon">💊</span> Opioid use &amp; buprenorphine</span>
+            <span class="chip"><span class="icon">💬</span> NLP for SDoH</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Current Roles</h3>
+          <div class="meta-list">
+            <div><strong>Graduate Student Researcher</strong>, UC Berkeley</div>
+            <div>Graduate Research Assistant, CCDD (Harvard Chan), 2023–2025</div>
+            <div>Research Assistant, Weill Cornell Medicine &amp; HMS / MGH ITA</div>
+            <div>Research Volunteer, Mayo Clinic (Pediatric ID)</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-label="About">
+      <div class="section-header">
+        <h2 class="section-title">About</h2>
+        <p class="section-kicker">Training across data science, public health, and infectious disease</p>
+      </div>
+      <div class="section-body">
+        <div class="about-grid">
+          <div>
+            <p>
+              I am an infectious disease epidemiologist with interdisciplinary training in data
+              science, epidemiology, and systems modeling. My work spans epidemic modeling and
+              phylodynamics, suicide epidemiology, opioid use disorder, and applications of natural
+              language processing to social determinants of health.
+            </p>
+            <p>
+              I am currently a <strong>PhD student in Epidemiology (Infectious Disease track)</strong>
+              at the University of California, Berkeley, and previously completed my
+              <strong>MS in Epidemiology</strong> at the Harvard T.H. Chan School of Public Health.
+              I am particularly interested in how quantitative methods and mechanistic models can
+              inform real-world decision-making in infectious disease control and mental health.
+            </p>
+          </div>
+          <div>
+            <ul class="about-list">
+              <li>
+                <span class="label">Education</span><br />
+                PhD in Epidemiology, UC Berkeley (Infectious Disease track, in progress)<br />
+                MS in Epidemiology, Harvard University (Infectious Disease track, 2025)<br />
+                BA in Data Science &amp; Public Health, UC Berkeley, 2023
+              </li>
+              <li>
+                <span class="label">Selected Expertise</span><br />
+                Infectious disease modeling; agent-based and individual-based models; test-negative designs;
+                phylodynamics; suicide and mental health epidemiology; opioid use disorder modeling; NLP for SDoH.
+              </li>
+              <li>
+                <span class="label">Technical Skills</span><br />
+                R, Python, NetLogo, BEAST2, ArcGIS, Tableau, Adobe Illustrator &amp; Photoshop,
+                Covidence, Java, Microsoft Office Suite.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH EXPERIENCE -->
+    <section id="research" class="section" aria-label="Research Experience">
+      <div class="section-header">
+        <h2 class="section-title">Research</h2>
+        <p class="section-kicker">Current work and selected prior projects</p>
+      </div>
+      <div class="section-body">
+        <div class="two-column">
+          <div>
+            <h3 class="subsection-title">Current Projects</h3>
+
+            <div class="item">
+              <div class="item-title">Estimating Infection Under-Reporting Fractions from Phylogenetic Trees</div>
+              <div class="item-meta">
+                <span>Graduate Student Researcher, UC Berkeley</span>
+                <span>Supervisor: Joseph A. Lewnard</span>
+                <span>Aug 2025–Present</span>
+              </div>
+              <div class="item-body">
+                Developing and applying phylodynamic methods to estimate infection under-reporting, performing bias analyses,
+                and validating results with Kaiser respiratory virus data.
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Phylogenetic and Genomic Approaches to Tuberculosis</div>
+              <div class="item-meta">
+                <span>Graduate Research Assistant, Harvard Chan / Harvard Medical School</span>
+                <span>Supervisors: Megan Murray &amp; Chuan-Chin Huang</span>
+                <span>2024–2025</span>
+              </div>
+              <ul class="compact">
+                <li>Analyzing ambiguous nucleotide calls in <em>Mycobacterium tuberculosis</em> genomes.</li>
+                <li>Assessing WHO and UNAIDS methods for TB-HIV mortality and prevalence, including data source validation and assumption analysis.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Test-Negative Designs &amp; Correlates of Protection</div>
+              <div class="item-meta">
+                <span>Graduate Research Assistant, CCDD, Harvard Chan</span>
+                <span>Supervisor: Marc Lipsitch</span>
+                <span>Aug 2023–May 2025</span>
+              </div>
+              <div class="item-body">
+                Built individual-based simulation models to assess conditions under which test-negative designs can recover
+                the protective effect of scalar immune measures. Performed extensive analyses and manuscript development.
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="subsection-title">Selected Previous Work</h3>
+
+            <div class="item">
+              <div class="item-title">Behavioral Dynamics of Epidemic Trajectories &amp; Vaccination Strategies</div>
+              <div class="item-meta">
+                <span>Harvard Medical School &amp; MGH Institute for Technology Assessment</span>
+                <span>Supervisors: Mohammad Jalali &amp; Navid Ghaffarzadegan</span>
+                <span>2023–2025</span>
+              </div>
+              <div class="item-body">
+                Developed agent-based models in NetLogo to study how behavioral responses and vaccination strategies shape
+                epidemic trajectories; analyzed and visualized outputs in Python.
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Suicide Deaths with and without Intention Disclosure</div>
+              <div class="item-meta">
+                <span>Weill Cornell Medicine | NewYork-Presbyterian</span>
+                <span>Supervisors: Yunyu Xiao &amp; J. John Mann</span>
+                <span>Jun 2022–Present</span>
+              </div>
+              <div class="item-body">
+                Cleaned and analyzed NVDRS data to characterize trends and risk factors in suicide deaths with versus without
+                warning signs, using R and Joinpoint Trend Analysis Software.
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">NLP &amp; Large Language Models for Social Determinants of Health</div>
+              <div class="item-meta">
+                <span>Systematic Review</span>
+                <span>Weill Cornell Medicine</span>
+                <span>Aug 2024–Present</span>
+              </div>
+              <div class="item-body">
+                Conducting systematic review of NLP and LLM applications that address social determinants of health,
+                including title/abstract screening, full-text review, and data extraction.
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Buprenorphine Treatment &amp; Opioid Overdose</div>
+              <div class="item-meta">
+                <span>Harvard Medical School &amp; MGH ITA</span>
+                <span>2022–2023</span>
+              </div>
+              <ul class="compact">
+                <li>Modeled long-term effects of buprenorphine treatment seeking, duration, and capacity on overdose fatalities.</li>
+                <li>Analyzed longitudinal trends in buprenorphine receipt and waivered providers in the U.S.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section" aria-label="Publications">
+      <div class="section-header">
+        <h2 class="section-title">Publications</h2>
+        <p class="section-kicker">Peer-reviewed articles and ongoing work</p>
+      </div>
+      <div class="section-body">
+        <div class="pub-group">
+          <h3 class="pub-group-title">Published</h3>
+
+          <p class="pub-item">
+            Li G, Hanna C, Dinnes LM, Allen-Rhoades WA, Kohorst MA, Levy ER, Van Dorn CS,
+            <span class="me">Zhang Z</span>, Gaensbauer JT.
+            Seraph® 100 Microbind® utilization in immunocompromised toddler with adenovirus viremia in conjunction with continuous renal replacement therapy and extracorporeal membrane oxygenation.
+            <span class="pub-journal">IDCases</span>. 2025;42:e02380.
+          </p>
+
+          <p class="pub-item">
+            Li G, Reis CA, Kruc RM, <span class="me">Zhang Z</span>, Streck NT, Ristagno EH, Mandrekar J, Wolf MJ, Gaensbauer JT, Patel R.
+            16S Ribosomal RNA Gene PCR and Sequencing for Pediatric Infection Diagnosis, United States, 2020–2023.
+            <span class="pub-journal">Emerging Infectious Diseases</span>. 2025;31(13):129–136.
+          </p>
+
+          <p class="pub-item">
+            <span class="me">Zhang Z</span>, Jalali MS, Ghaffarzadegan N.
+            Behavioral Dynamics of Epidemic Trajectories and Vaccination Strategies: A Simulation-based Analysis.
+            <span class="pub-journal">Journal of Artificial Societies and Social Simulation</span>. 2025;28(1):3.
+          </p>
+
+          <p class="pub-item">
+            Rajwal S, <span class="me">Zhang Z</span>, Chen Y, Rogers H, Sarker A, Xiao Y.
+            Applications of Natural Language Processing and Large Language Models for Social Determinants of Health: Protocol for a Systematic Review.
+            <span class="pub-journal">JMIR Research Protocols</span>. 2025.
+          </p>
+
+          <p class="pub-item">
+            Stringfellow EJ, Lim TY, DiGennaro C, <span class="me">Zhang Z</span>, Paramasivam P, Bearnot B, Humphreys K, Jalali MS.
+            Long-Term Effects of Increasing Buprenorphine Treatment Seeking, Duration, and Capacity on Opioid Overdose Fatalities:
+            A Model-based Analysis.
+            <span class="pub-journal">Journal of Addiction Medicine</span>. 2023;17(4):439–446.
+          </p>
+
+          <p class="pub-item">
+            Stringfellow EJ, Lim TY, Dong H, <span class="me">Zhang Z</span>, Jalali MS.
+            The Association Between Longitudinal Trends in Receipt of Buprenorphine for Opioid Use Disorder and Buprenorphine-Waivered Providers in the United States.
+            <span class="pub-journal">Addiction</span>. 2023;118(11):2215–2219.
+          </p>
+        </div>
+
+        <div class="pub-group">
+          <h3 class="pub-group-title">Preprints</h3>
+          <p class="pub-item">
+            <span class="me">Zhang Z</span>, Boyer C, Lipsitch M.
+            Use of the Test-Negative Design to Estimate the Protective Effect of a Scalar Immune Measure: A Simulation Analysis.
+            <span class="pub-journal">medRxiv</span>. 2024.
+          </p>
+        </div>
+
+        <div class="pub-group">
+          <h3 class="pub-group-title">In Preparation</h3>
+          <p class="pub-item">
+            <span class="me">Zhang Z</span>, Xiao Y, Yip PSF, Cerel J, Mann JJ.
+            Suicide Deaths and Intention Disclosure: Trend Analysis in the US From 2003–2022.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="section" aria-label="Teaching">
+      <div class="section-header">
+        <h2 class="section-title">Teaching</h2>
+        <p class="section-kicker">Engaging students in epidemiologic methods and practice</p>
+      </div>
+      <div class="section-body">
+        <div class="two-column">
+          <div>
+            <h3 class="subsection-title">Formal Roles</h3>
+
+            <div class="item">
+              <div class="item-title">Teaching Fellow, Principles of Clinical Trials</div>
+              <div class="item-meta">
+                <span>Harvard T.H. Chan School of Public Health</span>
+                <span>Jan 2025–Mar 2025</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Tutor, Introduction to Epidemiology; Applied Regression Analysis</div>
+              <div class="item-meta">
+                <span>Harvard T.H. Chan School of Public Health</span>
+                <span>Sept 2024–May 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="subsection-title">Teaching Interests</h3>
+            <ul class="compact">
+              <li>Infectious disease epidemiology and outbreak investigation.</li>
+              <li>Simulation-based methods for epidemics (agent-based and phylodynamic models).</li>
+              <li>Regression modeling and causal inference in observational data.</li>
+              <li>Applications of NLP and machine learning in public health.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALKS & AWARDS -->
+    <section id="talks" class="section" aria-label="Talks and Awards">
+      <div class="section-header">
+        <h2 class="section-title">Talks &amp; Awards</h2>
+        <p class="section-kicker">Selected presentations and recognition</p>
+      </div>
+      <div class="section-body">
+        <div class="two-column">
+          <div>
+            <h3 class="subsection-title">Selected Oral Presentations</h3>
+            <ul class="compact">
+              <li>
+                Use of the test-negative design to estimate the protective effect of a scalar immune measure: identification and estimation.
+                <em>Society for Epidemiologic Research</em>, June 2025.
+              </li>
+              <li>
+                Clinical Experience with 16S Ribosomal RNA Gene PCR Sequencing of Normally Sterile Body Fluids and Tissues in Pediatric Patients.
+                <em>IDWeek</em>, October 2024.
+              </li>
+              <li>
+                Trends in Suicide Deaths with and without Warning from 2003–2019:
+                Identifying the Missing Link for Effective Suicide Prevention.
+                <em>American Public Health Association Annual Meeting</em>, November 2022.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subsection-title">Awards</h3>
+            <ul class="compact">
+              <li>
+                <strong>IDWeek Travel Award</strong> for Top Abstracts Submitted in Diagnostics, 2024.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV & CONTACT -->
+    <section id="cv-contact" class="section" aria-label="CV and Contact">
+      <div class="section-header">
+        <h2 class="section-title">CV &amp; Contact</h2>
+        <p class="section-kicker">Get in touch or download a full CV</p>
+      </div>
+      <div class="section-body">
+        <div class="contact-grid">
+          <div>
+            <h3 class="subsection-title">Contact</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email</span><br />
+                <a href="mailto:leozhang0429@berkeley.edu">leozhang0429@berkeley.edu</a>
+              </li>
+              <li>
+                <span class="label">Location</span><br />
+                Berkeley, CA, United States
+              </li>
+              <li>
+                <span class="label">Affiliations</span><br />
+                University of California, Berkeley – School of Public Health<br />
+                Harvard T.H. Chan School of Public Health (alumna)<br />
+                Weill Cornell Medicine | NewYork-Presbyterian<br />
+                Harvard Medical School &amp; MGH Institute for Technology Assessment<br />
+                Mayo Clinic, Division of Pediatric Infectious Diseases
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subsection-title">Full CV</h3>
+            <div class="cv-box">
+              <p>
+                For a detailed overview of my education, research projects, publications, and teaching experience,
+                you can download my full CV using the button at the top of this page or by linking this site to
+                your latest PDF.
+              </p>
+              <p>
+                To update the CV link, replace the file name in the HTML:
+              </p>
+              <p><code>&lt;a href="src/CV_Ziyuan_Zhang.pdf" ...&gt;</code></p>
+              <p>
+                with the name or URL of your current CV file on your web server.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Ziyuan Zhang. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    function toggleNav() {
+      var el = document.getElementById("navLinks");
+      el.classList.toggle("open");
+    }
+
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
