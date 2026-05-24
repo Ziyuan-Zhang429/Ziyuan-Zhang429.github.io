@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ziyuan Zhang</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .contact-item {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.6rem 1.8rem;
+    }
+    .contact-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.5rem;
+    }
+    .contact-value {
+      font-size: 1rem;
+      color: var(--ink);
+    }
+    .contact-value a { color: var(--accent); }
+    .affil-list { display: flex; flex-direction: column; gap: 0.9rem; }
+    .affil-item {
+      padding: 1.3rem 1.8rem;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .affil-name { font-size: 0.95rem; font-weight: 500; }
+    .affil-role { font-size: 0.85rem; color: var(--ink-3); margin-top: 0.2rem; }
+    @media (max-width: 560px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>ZZ</span> &nbsp;Ziyuan Zhang</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+  <header class="page-header fade-in">
+    <p class="page-eyebrow">Get in touch</p>
+    <h1 class="page-title">Contact <em>&amp; CV</em></h1>
+    <p class="page-subtitle">Open to collaborations on infectious disease modeling, test-negative designs, and data-driven suicide prevention research.</p>
+  </header>
+
+  <!-- Contact Info -->
+  <section>
+    <p class="section-label">Contact information</p>
+    <div class="contact-grid fade-in">
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:leozhang0429@berkeley.edu">leozhang0429@berkeley.edu</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">(510) 309-4819</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Berkeley, CA, United States</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Full CV</div>
+        <div class="contact-value"><a href="CV_Ziyuan_Zhang.pdf" target="_blank">Download PDF →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliations -->
+  <section>
+    <p class="section-label">Affiliations</p>
+    <div class="affil-list fade-in">
+      <div class="affil-item">
+        <div>
+          <div class="affil-name">University of California, Berkeley — School of Public Health</div>
+          <div class="affil-role">PhD student in Epidemiology (Infectious Disease track); MA in Biostatistics</div>
+        </div>
+        <span class="tag">Primary</span>
+      </div>
+      <div class="affil-item">
+        <div>
+          <div class="affil-name">Harvard T.H. Chan School of Public Health</div>
+          <div class="affil-role">MS in Epidemiology (alumna, 2025)</div>
+        </div>
+        <span class="tag">Alumna</span>
+      </div>
+      <div class="affil-item">
+        <div>
+          <div class="affil-name">Weill Cornell Medicine | NewYork-Presbyterian</div>
+          <div class="affil-role">Research Assistant — Suicide epidemiology &amp; NLP for SDoH</div>
+        </div>
+        <span class="tag">Active</span>
+      </div>
+      <div class="affil-item">
+        <div>
+          <div class="affil-name">Mayo Clinic — Division of Pediatric Infectious Diseases</div>
+          <div class="affil-role">Research Volunteer — Bacteriophage therapy &amp; pediatric infection diagnosis</div>
+        </div>
+        <span class="tag">Active</span>
+      </div>
+      <div class="affil-item">
+        <div>
+          <div class="affil-name">Harvard Medical School &amp; MGH Institute for Technology Assessment</div>
+          <div class="affil-role">Research Assistant — Epidemic modeling &amp; opioid use disorder (2022–2025)</div>
+        </div>
+        <span class="tag">Prior</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="fade-in">
+    <div style="background: var(--surface); border: 1px solid var(--rule); border-radius:4px; padding: 2.5rem 2rem; text-align: center;">
+      <p style="font-size:1.15rem; color:var(--ink); margin-bottom:0.5rem; font-weight:500;">Interested in collaborating?</p>
+      <p style="color:var(--ink-3); margin-bottom:1.5rem; font-size:0.95rem;">I'm always open to hearing about new research directions and collaborative opportunities.</p>
+      <a href="mailto:leozhang0429@berkeley.edu" class="btn btn-primary">Send an email</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="footer-name">© 2025 Ziyuan Zhang</span>
+  <div class="footer-links">
+    <a href="mailto:leozhang0429@berkeley.edu">Email</a>
+    <a href="CV_Ziyuan_Zhang.pdf" target="_blank">CV</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
