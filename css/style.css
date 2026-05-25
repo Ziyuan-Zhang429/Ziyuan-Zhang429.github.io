@@ -344,7 +344,6 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-photo-desktop {
   width: 300px;
-  margin-top: 8.5rem;
 }
 .hero-photo-desktop img {
   width: 100%;
@@ -360,11 +359,9 @@ p:last-child { margin-bottom: 0; }
   .hero-layout {
     display: block;
   }
-  /* Hide the right-column photo on mobile */
   .hero-photo-desktop {
     display: none;
   }
-  /* Show the photo inside the text column instead, after the buttons */
   .hero-photo-mobile {
     display: block;
     width: 180px;
