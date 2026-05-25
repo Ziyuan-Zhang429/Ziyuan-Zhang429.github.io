@@ -334,7 +334,7 @@ p:last-child { margin-bottom: 0; }
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 4rem;
-  align-items: start;
+  align-items: center;
   margin-bottom: 0;
 }
 .hero-text {
@@ -342,7 +342,7 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-photo-desktop {
   width: 300px;
-  margin-top: 2.5rem;
+  margin-top: 0;
 }
 .hero-photo-desktop img {
   width: 100%;
