@@ -1,0 +1,158 @@
+/* Site-specific tokens layered on top of the Untitled UI theme. */
+
+@theme static {
+    /* Page canvas and raised surfaces. Light mode reads like warm paper. */
+    --color-page: var(--color-neutral-50);
+    --color-surface: var(--color-white);
+    --color-surface-muted: var(--color-neutral-100);
+
+    /*
+     * SIRD palette: susceptible gray, infected red, recovered green, died violet. Checked with the dataviz palette
+     * validator against white and the dark surface: red and green are split by lightness as well as hue,
+     * so they stay apart under protanopia and deuteranopia (ΔE 8.5 light / 6.7 dark, with direct labels).
+     */
+    --color-sir-s: rgb(184 179 170);
+    --color-sir-i: rgb(233 87 59);
+    --color-sir-r: rgb(11 107 90);
+    /*
+     * Died: a mid violet, lighter than the dark green so recovered and died are split by lightness too
+     * (ΔE 27 normal, 18 deuteranopia; 4.3:1 on white). Validated as a 4-colour set; drawn as ✕ marks.
+     */
+    --color-sir-d: rgb(155 95 208);
+    /* Susceptible nodes at rest, a touch quieter than the chart line. */
+    --color-sir-s-muted: color-mix(in srgb, var(--color-sir-s) 75%, transparent);
+    --color-sir-edge: var(--color-neutral-200);
+
+    --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+@layer base {
+    .dark-mode {
+        --color-page: var(--color-neutral-950);
+        --color-surface: rgb(24 23 20);
+        --color-surface-muted: var(--color-neutral-900);
+
+        --color-sir-s: rgb(103 99 92);
+        --color-sir-i: rgb(225 75 57);
+        --color-sir-r: rgb(42 168 132);
+        --color-sir-d: rgb(140 118 201);
+        --color-sir-edge: var(--color-neutral-800);
+    }
+
+    html {
+        /* Anchor targets land just below the sticky header (64px + 8px). Elements don't add their own scroll-margin. */
+        scroll-padding-top: 4.5rem;
+        background-color: var(--color-page);
+    }
+
+    ::selection {
+        background-color: var(--color-brand-200);
+        color: var(--color-brand-950);
+    }
+
+    .dark-mode ::selection {
+        background-color: var(--color-brand-800);
+        color: var(--color-brand-50);
+    }
+}
+
+/* ─── Transmission network figure ─────────────────────────────── */
+
+.sir-node {
+    fill: var(--color-sir-s-muted);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.sir-node[data-infected] {
+    animation: sir-node var(--sir-period) linear var(--sir-delay) infinite;
+}
+
+.sir-edge {
+    stroke: var(--color-sir-edge);
+}
+
+.sir-edge[data-transmission] {
+    animation: sir-edge var(--sir-period) linear var(--sir-delay) infinite;
+}
+
+@keyframes sir-node {
+    0% {
+        fill: var(--color-sir-s-muted);
+        transform: scale(1);
+    }
+    1.5% {
+        fill: var(--color-sir-i);
+        transform: scale(2);
+    }
+    6% {
+        fill: var(--color-sir-i);
+        transform: scale(1.35);
+    }
+    16% {
+        fill: var(--color-sir-i);
+        transform: scale(1.35);
+    }
+    24% {
+        fill: var(--color-sir-r);
+        transform: scale(1);
+    }
+    84% {
+        fill: var(--color-sir-r);
+    }
+    96%,
+    100% {
+        fill: var(--color-sir-s-muted);
+    }
+}
+
+@keyframes sir-edge {
+    0% {
+        stroke: var(--color-sir-i);
+    }
+    10% {
+        stroke: var(--color-sir-i);
+    }
+    24% {
+        stroke: var(--color-sir-r);
+    }
+    84% {
+        stroke: var(--color-sir-r);
+    }
+    96%,
+    100% {
+        stroke: var(--color-sir-edge);
+    }
+}
+
+/* Static snapshot when the user prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    .sir-node[data-infected],
+    .sir-edge[data-transmission] {
+        animation: none;
+    }
+    .sir-node[data-static="i"] {
+        fill: var(--color-sir-i);
+        transform: scale(1.35);
+    }
+    .sir-node[data-static="r"] {
+        fill: var(--color-sir-r);
+    }
+    .sir-edge[data-static="r"] {
+        stroke: var(--color-sir-r);
+    }
+    .animate-fade-up {
+        animation: none;
+    }
+}

@@ -1,0 +1,91 @@
+import type { AreaId, Project } from "./types";
+
+/** Ordered as displayed. Titles and descriptions live under `research.projects` in the message catalog. */
+export const PROJECTS: Project[] = [
+    {
+        id: "mpox",
+        period: { start: "2025-08" },
+        status: "current",
+        people: { role: "supervisors", names: ["Joseph A. Lewnard, Ph.D.", "Nicola F. Müller, Ph.D."] },
+        tags: ["mpox", "phylodynamics", "vaccine-effectiveness", "bayesian-modeling"],
+        areas: ["infectious-disease", "phylodynamics-vaccines"],
+    },
+    {
+        id: "rsv",
+        period: { start: "2025-08" },
+        status: "current",
+        tags: ["rsv", "comparative-effectiveness", "ehr", "survival-analysis"],
+        areas: ["infectious-disease", "phylodynamics-vaccines"],
+    },
+    {
+        id: "suicide-intent",
+        period: { start: "2022-06" },
+        status: "current",
+        people: { role: "supervisors", names: ["Yunyu Xiao, Ph.D.", "J. John Mann, M.D."] },
+        tags: ["suicide-epidemiology", "nvdrs", "trend-analysis", "r"],
+        areas: ["suicide"],
+        publicationIds: ["suicide-intent-disclosure"],
+    },
+    {
+        id: "nlp-sdoh",
+        period: { start: "2024-08", end: "2026-04" },
+        status: "previous",
+        people: { role: "supervisors", names: ["Yunyu Xiao, Ph.D.", "Abeed Sarker, Ph.D."] },
+        tags: ["nlp", "llms", "sdoh", "systematic-review"],
+        areas: ["sdoh"],
+        publicationIds: ["nlp-sdoh-review", "nlp-sdoh-protocol"],
+    },
+    {
+        id: "phage-therapy",
+        period: { start: "2024-12", end: "2026-05" },
+        status: "previous",
+        people: { role: "collaborator", names: ["Guyu Li, M.D."] },
+        tags: ["bacteriophage-therapy", "pediatric-id", "python"],
+        areas: ["infectious-disease"],
+    },
+    {
+        id: "test-negative-design",
+        period: { start: "2023-08", end: "2025-05" },
+        status: "previous",
+        people: { role: "supervisor", names: ["Marc Lipsitch, D.Phil."] },
+        tags: ["test-negative-design", "simulation", "vaccines", "r"],
+        areas: ["phylodynamics-vaccines"],
+        publicationIds: ["tnd-scalar-immune"],
+    },
+    {
+        id: "tb-genomics",
+        period: { start: "2024", end: "2025" },
+        status: "previous",
+        people: { role: "supervisors", names: ["Megan Murray", "Chuan-Chin Huang", "Jeffrey Imai-Eaton"] },
+        tags: ["tuberculosis", "genomics", "tb-hiv", "r"],
+        areas: ["infectious-disease"],
+    },
+    {
+        id: "behavioral-dynamics",
+        period: { start: "2023-03", end: "2025-01" },
+        status: "previous",
+        people: { role: "supervisors", names: ["Mohammad Jalali, Ph.D.", "Navid Ghaffarzadegan, Ph.D."] },
+        tags: ["agent-based-modeling", "netlogo", "vaccination", "python"],
+        areas: ["infectious-disease"],
+        publicationIds: ["behavioral-dynamics-abm"],
+    },
+    {
+        id: "buprenorphine",
+        period: { start: "2022-06", end: "2025-01" },
+        status: "previous",
+        people: { role: "supervisor", names: ["Mohammad Jalali, Ph.D."] },
+        tags: ["opioid-use-disorder", "buprenorphine", "systems-modeling"],
+        areas: [],
+        publicationIds: ["buprenorphine-overdose-model", "buprenorphine-waivered-providers"],
+    },
+    {
+        id: "suicide-prevention-review",
+        period: { start: "2021-09", end: "2023-05" },
+        status: "previous",
+        people: { role: "supervisors", names: ["Timothy T. Brown, Ph.D.", "Yunyu Xiao, Ph.D."] },
+        tags: ["meta-analysis", "suicide-prevention", "covid-19"],
+        areas: ["suicide"],
+    },
+];
+
+export const countProjectsInArea = (area: AreaId) => PROJECTS.filter((project) => project.areas.includes(area)).length;

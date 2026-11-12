@@ -1,0 +1,575 @@
+{
+    "meta": {
+        "defaultTitle": "{name} — {field}",
+        "pageTitle": "{page} — {name}",
+        "description": "Ziyuan Zhang is a PhD candidate in Epidemiology at UC Berkeley studying infectious disease dynamics, transmission heterogeneity, vaccine effectiveness, and behavioral responses during epidemics."
+    },
+    "profile": {
+        "name": "Ziyuan Zhang",
+        "field": "Infectious Disease Epidemiology",
+        "headline": "PhD candidate · UC Berkeley School of Public Health",
+        "location": "Berkeley, CA",
+        "portraitAlt": "Portrait of Ziyuan Zhang",
+        "bio": "I am a PhD candidate in Epidemiology at University of California, Berkeley studying infectious disease dynamics, transmission heterogeneity, vaccine effectiveness, and behavioral responses during epidemics. My broader interests also include social and psychiatric epidemiology, particularly suicide prevention and social determinants of health."
+    },
+    "common": {
+        "periodOngoing": "{start} – Present",
+        "expected": "Expected {date}",
+        "downloadCv": "Download CV",
+        "viewCv": "View CV",
+        "cv": "CV",
+        "email": "Email",
+        "sendEmail": "Send an email",
+        "copyEmail": "Copy email address",
+        "copy": "Copy",
+        "copied": "Copied",
+        "opensInNewTab": "(opens in a new tab)",
+        "people": {
+            "supervisors": "Supervisors: {names}",
+            "supervisor": "Supervisor: {names}",
+            "collaborator": "Collaborator: {names}"
+        }
+    },
+    "layout": {
+        "skipToContent": "Skip to content",
+        "primaryNavigation": "Primary",
+        "footerNavigation": "Footer",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "switchToDark": "Switch to dark mode",
+        "switchToLight": "Switch to light mode",
+        "backToTop": "Back to top",
+        "copyright": "© {year} {name}",
+        "homeLink": "{name}, home"
+    },
+    "nav": {
+        "home": "Home",
+        "research": "Research",
+        "publications": "Publications",
+        "teaching": "Teaching",
+        "contact": "Contact"
+    },
+    "areas": {
+        "infectious-disease": {
+            "title": "Infectious Disease Dynamics",
+            "shortTitle": "Infectious disease",
+            "description": "Epidemic modeling, agent-based simulation, and behavioral dynamics of epidemic trajectories."
+        },
+        "phylodynamics-vaccines": {
+            "title": "Phylodynamics & Vaccine Effectiveness",
+            "shortTitle": "Phylodynamics & vaccines",
+            "description": "Transmission inference, Bayesian modeling, and vaccine protection estimation."
+        },
+        "suicide": {
+            "title": "Suicide Epidemiology",
+            "shortTitle": "Suicide epidemiology",
+            "description": "Trends in suicide intent disclosure, risk factors, and prevention using NVDRS data."
+        },
+        "sdoh": {
+            "title": "Social Determinants of Health",
+            "shortTitle": "Social determinants",
+            "description": "NLP and LLM applications to identify and address social determinants of health."
+        }
+    },
+    "education": {
+        "phd": {
+            "degree": "PhD in Epidemiology (Infectious Disease track)",
+            "institution": "University of California, Berkeley",
+            "location": "Berkeley, CA",
+            "notes": {
+                "emphasis": "Designated emphasis in Computational Precision Health",
+                "concurrent": "Master of Arts in Biostatistics (concurrent)"
+            }
+        },
+        "ms": {
+            "degree": "MS in Epidemiology (Infectious Disease track)",
+            "institution": "Harvard T.H. Chan School of Public Health",
+            "location": "Boston, MA",
+            "notes": {}
+        },
+        "ba": {
+            "degree": "BA in Data Science & Public Health",
+            "institution": "University of California, Berkeley",
+            "location": "Berkeley, CA",
+            "notes": {
+                "concentration": "Data Science with Human and Population Health concentration; double major in Public Health"
+            }
+        }
+    },
+    "positions": {
+        "berkeley-gsr": {
+            "role": "Graduate Student Researcher",
+            "organization": "UC Berkeley | CDC California Center for Outbreak Response",
+            "description": "Mpox transmission and vaccine effectiveness, and the real-world effectiveness of RSV immunization."
+        },
+        "weill-cornell-ra": {
+            "role": "Research Assistant",
+            "organization": "Weill Cornell Medicine / NewYork-Presbyterian",
+            "description": "Suicide epidemiology and NLP for social determinants of health."
+        }
+    },
+    "affiliations": {
+        "status": {
+            "primary": "Primary",
+            "active": "Active",
+            "alumnus": "Alumnus",
+            "prior": "Prior"
+        },
+        "items": {
+            "berkeley": {
+                "name": "University of California, Berkeley — School of Public Health",
+                "role": "PhD candidate in Epidemiology (Infectious Disease track); MA in Biostatistics"
+            },
+            "harvard-chan": {
+                "name": "Harvard T.H. Chan School of Public Health",
+                "role": "MS in Epidemiology (alumnus, 2025)"
+            },
+            "weill-cornell": {
+                "name": "Weill Cornell Medicine | NewYork-Presbyterian",
+                "role": "Research Assistant — Suicide epidemiology & NLP for SDoH"
+            },
+            "mayo": {
+                "name": "Mayo Clinic — Division of Pediatric Infectious Diseases",
+                "role": "Research Volunteer — Bacteriophage therapy & pediatric infection diagnosis (2024–2026)"
+            },
+            "mgh-ita": {
+                "name": "Harvard Medical School & MGH Institute for Technology Assessment",
+                "role": "Research Assistant — Epidemic modeling & opioid use disorder (2022–2025)"
+            }
+        }
+    },
+    "home": {
+        "title": "Home",
+        "actions": {
+            "viewResearch": "View research",
+            "getInTouch": "Get in touch",
+            "trySimulation": "Try the epidemic simulator"
+        },
+        "figure": {
+            "label": "Fig. 1",
+            "caption": "A stochastic SIRD epidemic among {population} people on a random contact network. Before pressing Play, click people to choose the initial infected.",
+            "susceptible": "Susceptible",
+            "infected": "Infected",
+            "recovered": "Recovered",
+            "superspreader": "Superspreader",
+            "initialInfected": "Initial infected",
+            "died": "Died",
+            "permalink": "Fig. 1, link to the simulator"
+        },
+        "focus": {
+            "title": "Research focus",
+            "projectCount": "{count, plural, =0 {Explore research} one {# project} other {# projects}}"
+        },
+        "current": {
+            "title": "Currently",
+            "projects": "Projects"
+        },
+        "selected": {
+            "title": "Selected publications",
+            "viewAll": "All publications"
+        },
+        "education": {
+            "title": "Education"
+        },
+        "cta": {
+            "title": "Interested in collaborating?",
+            "description": "I'm always open to hearing about new research directions and collaborative opportunities."
+        },
+        "simulator": {
+            "title": "Play with an epidemic",
+            "description": "Every run is random. Pick a disease, tune the parameters and choose the initial infected, then press Play. Reset replays the same setup with new luck; with Auto run on, each finished run is followed by a new one on a freshly seeded network.",
+            "legend": "Current counts",
+            "day": "Day {day}",
+            "dayLabel": "Day",
+            "r0Label": "R₀",
+            "r0Description": "Basic reproduction number: expected secondary infections from one case in a fully susceptible network.",
+            "controls": {
+                "label": "Parameters",
+                "beta": "Daily transmission per contact",
+                "recoveryDays": "(infectious period if they recover)",
+                "deathDays": "(infectious period if they die)",
+                "contacts": "Nearest contacts per person",
+                "initialCases": "Initial infected",
+                "superspreaders": "Superspreaders",
+                "superspreadersInfoLabel": "About superspreaders",
+                "superspreadersInfo": "Adds 2–4 clusters, each centred on one superspreader connected to at least 6 people. A few people causing many infections is typical of real outbreaks, where most cases infect no one and a few infect many (Lloyd-Smith et al., Nature 2005 [{source}]). Outbreaks take off faster, and R₀ rises because contacts are less even.",
+                "ifr": "Share who die",
+                "infectiousPeriod": "Infectious period",
+                "recovers": "Recovers",
+                "dies": "Dies"
+            },
+            "actions": {
+                "play": "Play",
+                "pause": "Pause",
+                "newNetwork": "New network",
+                "reset": "Reset",
+                "autoRun": "Auto run",
+                "share": "Share",
+                "shareHint": "Copy a link to this exact setup",
+                "shareCopied": "Link copied"
+            },
+            "chart": {
+                "label": "Epidemic curve: susceptible, infected, recovered and dead people by day, with the deterministic SIRD curves for comparison. Use the left and right arrow keys to read a day."
+            },
+            "summary": {
+                "peak": "Peak of {count} infected on day {day}",
+                "everInfected": "{percent} ever infected",
+                "deaths": "{count, plural, =0 {no deaths} one {# death} other {# deaths}}"
+            },
+            "presets": {
+                "label": "Disease presets",
+                "custom": "Custom",
+                "items": {
+                    "covid-ancestral": "COVID-19 (ancestral)",
+                    "covid-omicron": "COVID-19 (Omicron)",
+                    "influenza-a": "Influenza A",
+                    "influenza-b": "Influenza B",
+                    "measles": "Measles",
+                    "mpox": "Mpox",
+                    "ebola": "Ebola"
+                },
+                "capped": "This network can't reach that R₀: it caps out at {max} with these contacts.",
+                "caveat": "Point values from the cited studies. R₀ varies with population and setting.",
+                "customSummary": "Custom: set transmission, infectious periods, contacts and the share who die.",
+                "customCaveat": "Pick a disease above to start from published estimates.",
+                "line": "{r0} · infectious {infectious}",
+                "details": {
+                    "covid-ancestral": {
+                        "r0": "R₀ median 2.79 (mean 3.28)",
+                        "infectious": "≈ 2 days before to 7 days after symptom onset",
+                        "fatality": "IFR 0.47% (median country, April 2020, before vaccines)"
+                    },
+                    "covid-omicron": {
+                        "r0": "R₀ mean 9.5 (range 5.5–24)",
+                        "infectious": "culturable virus for a median of ≈ 8 days",
+                        "fatality": "IFR ≈ 79% lower than earlier variants in South Africa, ≈ 0.1%"
+                    },
+                    "influenza-a": {
+                        "r0": "R median 1.28 (IQR 1.19–1.37), seasonal",
+                        "infectious": "≈ 1 day before to 5–7 days after symptom onset",
+                        "fatality": "≈ 0.07% of symptomatic illnesses (US 2023–24 season, all types)"
+                    },
+                    "influenza-b": {
+                        "r0": "Early-epidemic Rₑ median 1.23 (range 1.06–1.58)",
+                        "infectious": "≈ 1 day before to 5–7 days after symptom onset",
+                        "fatality": "≈ 0.07% of symptomatic illnesses (US 2023–24 season, all types)"
+                    },
+                    "measles": {
+                        "r0": "R₀ often cited as 12–18",
+                        "infectious": "4 days before to 4 days after rash onset",
+                        "fatality": "1–2 deaths per 1,000 children who get measles"
+                    },
+                    "mpox": {
+                        "r0": "R₀ 1.94 (95% CrI 1.81–2.19), high-risk GBMSM, England 2022",
+                        "infectious": "until lesions heal, usually 2–4 weeks",
+                        "fatality": "65 deaths in 82,624 confirmed cases in 2022 (≈ 0.08%)"
+                    },
+                    "ebola": {
+                        "r0": "R₀ 1.71–2.02 (West Africa, 2014)",
+                        "infectious": "≈ 16.4 days if they recover, 7.5 if they die",
+                        "fatality": "≈ 50% of cases on average; 25–90% across outbreaks"
+                    }
+                },
+                "sources": {
+                    "label": "Sources for the disease presets",
+                    "cite": "Source {number}",
+                    "opensInNewTab": "(opens in a new tab)"
+                },
+                "fatality": "Fatality: {fatality}",
+                "infoLabel": "About disease presets",
+                "infoTitle": "Disease presets",
+                "infoDescription": "Each preset sets R₀, the infectious period, the fatality rate and contacts from published estimates; numbers in brackets point to the sources at the bottom. The transmission rate is solved so this network reaches the published R₀, which very contagious diseases can exceed.",
+                "sharedPeriodCaveat": "Point values from the cited studies. Fatal cases use the same infectious period (no separate estimate)."
+            },
+            "theory": {
+                "legend": "Simulation",
+                "dashed": "Deterministic SIRD, well-mixed, same R₀",
+                "tooltip": "Theory"
+            },
+            "setupHint": "Click people in the network to add or remove initial infected.",
+            "seed": "Seed {seed}",
+            "seedDescription": "New network re-rolls the seed: new people, contacts and initial infected.",
+            "deathsLabel": "Deaths",
+            "populations": {
+                "label": "Population",
+                "groupLabel": "Age of everyone in the network",
+                "items": {
+                    "all": "All ages",
+                    "infants": "Infants",
+                    "adults": "Adults",
+                    "middle-aged": "Middle-aged",
+                    "elderly": "Elderly"
+                },
+                "allSummary": "Whole-population fatality from the disease preset.",
+                "ageSummary": {
+                    "infection": "Fatality at age {ages}: {ifr} of infections",
+                    "illness": "Deaths at ages {ages}: {ifr} of symptomatic illnesses"
+                },
+                "infoLabel": "About population age",
+                "infoTitle": "Fatality by age",
+                "infoDescription": {
+                    "covid": "COVID-19 deaths rise steeply with age. Before vaccines, an estimated 0.005% of infections were fatal at age 1 (COVID-19 Forecasting Team, Lancet 2022 [{forecasting}]), and 0.01% at 25, 0.4% at 55 and 4.6% at 75 (Levin et al., European Journal of Epidemiology 2020 [{levin}]). Omicron values are scaled down 79% (Liu et al., IJID 2022 [{liu}]). Everyone in the network is set to one age: spread is unchanged, only who dies.",
+                    "flu": "Influenza deaths per symptomatic illness by age, US 2023–24 season (CDC preliminary estimates [{cdc}]): ≈ 0.009% at 0–4, 0.017% at 18–49, 0.063% at 50–64 and 0.73% at 65+. Everyone in the network is set to one age group: spread is unchanged, only who dies."
+                },
+                "scaledSummary": "Fatality at age {ages}: {base} × {scale} for Omicron ≈ {ifr}"
+            },
+            "infoLabel": "About this simulation",
+            "deathShareLabel": "of everyone ever infected"
+        }
+    },
+    "research": {
+        "title": "Research & Projects",
+        "eyebrow": "Work",
+        "description": "Current projects and selected prior work spanning infectious disease modeling, phylodynamics, suicide epidemiology, and computational public health.",
+        "filters": {
+            "label": "Filter projects by research area",
+            "all": "All areas"
+        },
+        "sections": {
+            "current": "Current projects",
+            "previous": "Selected previous work",
+            "skills": "Technical skills"
+        },
+        "empty": {
+            "title": "No projects in this area yet",
+            "description": "Try another research area or clear the filter.",
+            "action": "Show all projects"
+        },
+        "relatedPublications": "Related publications",
+        "inPreparation": "Manuscript in preparation",
+        "projects": {
+            "mpox": {
+                "title": "Epidemiology of Mpox: Integrating Transmission Inference, Biological Mechanisms, and Vaccine Effectiveness",
+                "organization": "UC Berkeley | CDC California Center for Outbreak Response",
+                "description": "Developing a multi-scale epidemiologic framework to address gaps in mpox surveillance, transmission mechanisms, and vaccine protection. Using phylodynamic simulation, Bayesian hierarchical modeling, and a matched case-control design across 12 U.S. jurisdictions."
+            },
+            "rsv": {
+                "title": "Real-World Comparative Effectiveness of RSV Immunization",
+                "organization": "UC Berkeley | CDC California Center for Outbreak Response",
+                "description": "Led a comparative effectiveness study using Kaiser Permanente Southern California electronic health records (47,650 infants) to evaluate maternal RSV vaccination and infant nirsevimab against antibiotic dispensing. Applied Andersen–Gill Cox regression accounting for recurrent events and time-varying exposures and confounders, plus g-computation to estimate relative and absolute effects, and generated IPTW-adjusted Kaplan–Meier curves to compare time to first antibiotic dispensing across immunization groups. Identified 18–19% lower antibiotic dispensing rates."
+            },
+            "suicide-intent": {
+                "title": "Trends in Suicide Intent Disclosure Among U.S. Decedents, 2003–2023",
+                "organization": "Weill Cornell Medicine",
+                "description": "Cleaning and analyzing National Violent Death Reporting System (NVDRS) data to characterize longitudinal trends and risk factors in suicide deaths with versus without warning signs. Using R and Joinpoint Trend Analysis Software. Manuscript in preparation."
+            },
+            "nlp-sdoh": {
+                "title": "NLP & LLMs for Social Determinants of Health — Systematic Review",
+                "organization": "Weill Cornell Medicine",
+                "description": "Contributed to a systematic review of natural language processing and large language model applications addressing social determinants of health. Responsible for title/abstract screening, full-text review, and data extraction. Published in JMIR, 2026."
+            },
+            "phage-therapy": {
+                "title": "In Vitro Phage Therapy: Treating S. epidermidis Biofilm with Phage K",
+                "organization": "Mayo Clinic",
+                "description": "Designed statistical analysis plan; analyzed and visualized experimental data with Python for a study on bacteriophage K treatment of Staphylococcus epidermidis biofilm-coated surgical screws."
+            },
+            "test-negative-design": {
+                "title": "Test-Negative Designs for Estimating Scalar Correlates of Protection",
+                "organization": "Harvard Chan / CCDD",
+                "description": "Built individual-based simulation models to assess conditions under which test-negative designs can recover the protective effect of scalar immune measures. Performed extensive sensitivity analyses and led manuscript development. Published in American Journal of Epidemiology, 2026."
+            },
+            "tb-genomics": {
+                "title": "Genomics of Mycobacterium tuberculosis and TB-HIV Coinfection Burden",
+                "organization": "Harvard Medical School / Harvard Chan",
+                "description": "Analyzed ambiguous nucleotide calls in M. tuberculosis genome sequencing with R. Assessed WHO and UNAIDS methods for estimating TB-HIV mortality and prevalence, including data source validation and assumption analysis."
+            },
+            "behavioral-dynamics": {
+                "title": "Behavioral Dynamics of Epidemic Trajectories & Vaccination",
+                "organization": "Harvard Medical School & MGH ITA",
+                "description": "Developed agent-based models in NetLogo to study how behavioral responses and vaccination strategies shape epidemic trajectories. Analyzed and visualized model outputs in Python. Published in JASSS, 2025."
+            },
+            "buprenorphine": {
+                "title": "Buprenorphine Treatment & Opioid Overdose Modeling",
+                "organization": "Harvard Medical School & MGH ITA",
+                "description": "Modeled long-term effects of buprenorphine treatment seeking, duration, and capacity on overdose fatalities. Analyzed longitudinal trends in buprenorphine receipt and waivered providers in the U.S. Two papers published in Journal of Addiction Medicine and Addiction."
+            },
+            "suicide-prevention-review": {
+                "title": "Systematic Review: Suicide Prevention in College Students & COVID-19",
+                "organization": "UC Berkeley",
+                "description": "Conducted systematic review and meta-analysis of suicide prevention interventions among college students before and during the COVID-19 pandemic. Applied ROBINS-I and RoB2 risk-of-bias tools."
+            }
+        },
+        "skills": {
+            "programming": "Programming",
+            "modeling": "Modeling",
+            "visualization": "GIS & Visualization",
+            "other": "Other"
+        }
+    },
+    "tags": {
+        "mpox": "Mpox",
+        "phylodynamics": "Phylodynamics",
+        "vaccine-effectiveness": "Vaccine effectiveness",
+        "bayesian-modeling": "Bayesian modeling",
+        "suicide-epidemiology": "Suicide epidemiology",
+        "nvdrs": "NVDRS",
+        "trend-analysis": "Trend analysis",
+        "r": "R",
+        "nlp": "NLP",
+        "llms": "LLMs",
+        "sdoh": "SDoH",
+        "systematic-review": "Systematic review",
+        "bacteriophage-therapy": "Bacteriophage therapy",
+        "pediatric-id": "Pediatric ID",
+        "python": "Python",
+        "test-negative-design": "Test-negative design",
+        "simulation": "Simulation",
+        "vaccines": "Vaccines",
+        "tuberculosis": "Tuberculosis",
+        "genomics": "Genomics",
+        "tb-hiv": "TB-HIV",
+        "agent-based-modeling": "Agent-based modeling",
+        "netlogo": "NetLogo",
+        "vaccination": "Vaccination",
+        "opioid-use-disorder": "Opioid use disorder",
+        "buprenorphine": "Buprenorphine",
+        "systems-modeling": "Systems modeling",
+        "meta-analysis": "Meta-analysis",
+        "suicide-prevention": "Suicide prevention",
+        "covid-19": "COVID-19",
+        "rsv": "RSV",
+        "comparative-effectiveness": "Comparative effectiveness",
+        "ehr": "Electronic health records",
+        "survival-analysis": "Survival analysis"
+    },
+    "publications": {
+        "title": "Publications",
+        "eyebrow": "Scholarship",
+        "heading": "Publications & Manuscripts",
+        "description": "Peer-reviewed articles, preprints, and manuscripts in preparation.",
+        "toolbar": {
+            "searchLabel": "Search publications",
+            "searchPlaceholder": "Search titles, authors, journals…",
+            "filterLabel": "Filter by authorship",
+            "all": "All",
+            "firstAuthor": "First author",
+            "results": "{count, plural, =0 {No publications} one {# publication} other {# publications}}"
+        },
+        "groups": {
+            "inPreparation": "In preparation"
+        },
+        "badges": {
+            "firstAuthor": "First author",
+            "inPreparation": "In preparation",
+            "award": "Award"
+        },
+        "actions": {
+            "copyCitation": "Copy citation",
+            "citationCopied": "Citation copied"
+        },
+        "citation": {
+            "inPreparation": "In preparation."
+        },
+        "empty": {
+            "title": "No matching publications",
+            "description": "No results for “{query}”. Try a different title, author, or journal.",
+            "action": "Clear search"
+        },
+        "talks": {
+            "title": "Oral presentations"
+        },
+        "awards": {
+            "title": "Awards"
+        }
+    },
+    "teaching": {
+        "title": "Teaching",
+        "eyebrow": "Pedagogy",
+        "heading": "Teaching & Mentorship",
+        "description": "Committed to engaging students in epidemiologic methods, quantitative reasoning, and the application of data science to public health.",
+        "sections": {
+            "roles": "Formal roles",
+            "interests": "Teaching interests"
+        },
+        "roles": {
+            "clinical-trials-tf": {
+                "role": "Teaching Fellow",
+                "courses": "Principles of Clinical Trials",
+                "institution": "Harvard T.H. Chan School of Public Health",
+                "description": "Led discussion sections and office hours for a graduate-level clinical trials methodology course. Supported students through problem sets, exam preparation, and conceptual questions on trial design, randomization, blinding, and analysis."
+            },
+            "methods-tutor": {
+                "role": "Tutor",
+                "courses": "Introduction to Epidemiology; Applied Regression Analysis",
+                "institution": "Harvard T.H. Chan School of Public Health",
+                "description": "Provided one-on-one and small-group tutoring for two core MPH/DrPH methodology courses. Topics included epidemiologic study designs, measures of association, confounding, and linear and logistic regression modeling."
+            }
+        },
+        "interests": {
+            "infectious-disease": {
+                "title": "Infectious Disease Epidemiology",
+                "description": "Outbreak investigation, transmission dynamics, and surveillance systems."
+            },
+            "simulation": {
+                "title": "Simulation-Based Methods",
+                "description": "Agent-based and phylodynamic modeling for epidemic analysis."
+            },
+            "causal-inference": {
+                "title": "Regression & Causal Inference",
+                "description": "Regression modeling and causal inference in observational epidemiology."
+            },
+            "nlp-ml": {
+                "title": "NLP & Machine Learning in Public Health",
+                "description": "Applications of language models and ML to health data and SDoH."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "eyebrow": "Get in touch",
+        "heading": "Contact",
+        "description": "Open to collaborations on infectious disease modeling, test-negative designs, and data-driven suicide prevention research.",
+        "sections": {
+            "reach": "Reach me",
+            "affiliations": "Affiliations"
+        },
+        "email": {
+            "label": "Email",
+            "hint": "The best way to reach me."
+        }
+    },
+    "notFound": {
+        "title": "Page not found",
+        "eyebrow": "404",
+        "heading": "This page didn’t spread.",
+        "description": "The page you’re looking for doesn’t exist or has moved.",
+        "goBack": "Go back",
+        "home": "Take me home"
+    },
+    "designSystem": {
+        "title": "Design system",
+        "eyebrow": "Internal",
+        "description": "Every base component in one place, rendered with live tokens. See DESIGN.md for the rules behind them.",
+        "sections": {
+            "colors": "Color",
+            "typography": "Typography",
+            "buttons": "Buttons",
+            "badges": "Badges & tags",
+            "inputs": "Inputs & filters",
+            "surfaces": "Surfaces",
+            "lists": "Lists",
+            "feedback": "Feedback",
+            "icons": "Icons"
+        },
+        "samples": {
+            "display": "Display serif",
+            "heading": "Section heading",
+            "body": "Body copy is set in Geist at 16 pixels with relaxed leading for long reading.",
+            "meta": "Meta label · 2026",
+            "primary": "Primary",
+            "secondary": "Secondary",
+            "tertiary": "Tertiary",
+            "link": "Text link",
+            "chipOne": "Option one",
+            "chipTwo": "Option two",
+            "chipThree": "Option three",
+            "cardTitle": "Card title",
+            "cardBody": "Cards separate content with a hairline ring, not shadow.",
+            "statLabel": "Stat label",
+            "emptyTitle": "Nothing here yet",
+            "emptyDescription": "Empty states say what is missing and what to do next.",
+            "timelineTitle": "Timeline entry",
+            "timelineBody": "Supporting detail for the entry."
+        }
+    }
+}
